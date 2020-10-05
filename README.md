@@ -14,6 +14,8 @@ Maximum allowed file path length. Default `200`.
 
 ## Example usage
 
-uses: graebm/max-path-action@v1.0
+```
+uses: graebm/max-path-action@v1
 with:
   limit: 150
+```

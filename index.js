@@ -30,7 +30,7 @@ function gatherPathsLongestFirst(baseDir) {
 }
 
 try {
-    const limit = core.getInput('limit')
+    const limit = core.getInput('limit') || 150
 
     core.info(`Checking for paths exceeding limit=${limit}`)
     allPaths = gatherPathsLongestFirst('.');
