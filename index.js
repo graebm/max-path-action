@@ -39,12 +39,8 @@ try {
     let failed = false;
     for (const filePath of allPaths) {
         if (filePath.length > limit) {
-            errMsg = `Path length=${filePath.length} exceeds limit=${limit}: ${filePath}`;
-            if (!failed) {
-                failed = true;
-                core.setFailed(errMsg);
-            }
-            core.error(errMsg);
+            failed = true
+            core.setFailed(`Path length=${filePath.length} exceeds limit=${limit}: ${filePath}`);
         } else {
             break;
         }
