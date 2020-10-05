@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const core = require('@actions/core')
 
 function gatherPathsRecursive(dir, baseDir, allPaths) {
     fs.readdirSync(dir).forEach(fileName => {
@@ -27,9 +28,6 @@ function gatherPathsLongestFirst(baseDir) {
     });
     return allPaths;
 }
-
-const core = require('@actions/core')
-const github = require('@actions/github')
 
 try {
     const limit = core.getInput('limit')
