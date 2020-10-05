@@ -49,6 +49,12 @@ try {
             break;
         }
     }
+
+    // just FYI, here's you're longest path
+    if (!failed && allPaths.length > 0) {
+        longestPath = allPaths[0]
+        core.info(`Longest path length=${longestPath.length}: ${longestPath}`)
+    }
 } catch (error) {
     core.setFailed(error.message)
 }
