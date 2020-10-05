@@ -1,0 +1,7 @@
+name: 'Max Path'
+description: 'Ensure file paths stay within a limit'
+inputs:
+  limit:
+    description: 'Maximum allowed file path length'
+    required: false
+    default: '150'
